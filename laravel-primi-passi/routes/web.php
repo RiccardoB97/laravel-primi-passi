@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $products = [
+        'laptops'=>[
+            'Mackbook',
+            'Acer',
+            'Asus',
+            'HP'
+            ]
+    ];
+    return view('home', $products);
 });
